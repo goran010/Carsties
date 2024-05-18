@@ -5,18 +5,16 @@ namespace IdentityService;
 public class RegisterViewModel
 {
     [Required]
-    public string Email { get; set; } = string.Empty; // Initialized to prevent warning
+    public string Email { get; set;}
 
     [Required]
-    public string Password { get; set; } = string.Empty;
+    public string Password { get; set;}
 
     [Required]
-    public string Username { get; set; } = string.Empty;
+    public string Username { get; set; }
 
     [Required]
-    public string FullName { get; set; } = string.Empty;
-
-    public string? ReturnUrl { get; set; } // Nullable, it's okay if this is null
-
-    public string? Button { get; set; }
+    public string FullName { get; set; }
+    public string ReturnUrl { get; set; }
+    public string Button { get; set; }
 }

@@ -13,7 +13,7 @@ public class SeedData
     public static void EnsureSeedData(WebApplication app)
     {
         using var scope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        var context = scope.ServiceProvider.GetService<ApplicationDbContext>();
         context.Database.Migrate();
 
         var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
@@ -55,8 +55,8 @@ public class SeedData
             bob = new ApplicationUser
             {
                 UserName = "bob",
-                Email = "bobSmith@email.com",
-                EmailConfirmed = true,
+                Email = "BobSmith@email.com",
+                EmailConfirmed = true
             };
             var result = userMgr.CreateAsync(bob, "Pass123$").Result;
             if (!result.Succeeded)
@@ -71,11 +71,11 @@ public class SeedData
             {
                 throw new Exception(result.Errors.First().Description);
             }
-            Log.Debug("Bob created");
+            Log.Debug("bob created");
         }
         else
         {
-            Log.Debug("Bob already exists");
+            Log.Debug("bob already exists");
         }
     }
 }
