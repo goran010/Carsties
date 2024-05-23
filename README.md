@@ -1,6 +1,6 @@
 # Microservices with .NET and Next.js
 
-This project is a practical implementation of a microservices architecture using .NET and Next.js, developed as part of an [Udemy course](#https://www.udemy.com/course/build-a-microservices-app-with-dotnet-and-nextjs-from-scratch) focused on learning these technologies. The aim is to build a robust and scalable application by breaking down the functionality into distinct, loosely-coupled services.
+This project is a practical implementation of a microservices architecture using .NET and Next.js, developed as part of an [Udemy course](https://www.udemy.com/course/build-a-microservices-app-with-dotnet-and-nextjs-from-scratch) focused on learning these technologies. The aim is to build a robust and scalable application by breaking down the functionality into distinct, loosely-coupled services.
 
 ## Features
 - Microservices Architecture: Each service is independent, allowing for easy scaling and maintenance.
